@@ -7,6 +7,7 @@ import { useState, useRef, useEffect, KeyboardEvent } from 'react'
 import { Search, X, Check } from 'lucide-react'
 import Image from 'next/image'
 
+
 type User = {
   id: string
   name: string
@@ -15,13 +16,13 @@ type User = {
 }
 
 const users: User[] = [
-  { id: '1', name: 'Phoenix Baker', username: '@phoenix', avatar: '/avatar.svg' },
-  { id: '2', name: 'Olivia Rhye', username: '@olivia', avatar: '/avatar-1.svg' },
-  { id: '3', name: 'Lana Steiner', username: '@lana', avatar: '/avatar-2.svg' },
-  { id: '4', name: 'Demi Wilkinson', username: '@demi', avatar: '/avatar-3.svg' },
-  { id: '5', name: 'Candice Wu', username: '@candice', avatar: '/avatar-4.svg' },
-  { id: '6', name: 'Natali Craig', username: '@natali', avatar: '/avatar-5.svg' },
-  { id: '7', name: 'Drew Cano', username: '@drew', avatar: '/avatar-6.svg' },
+  { id: '1', name: 'Phoenix Baker', username: '@phoenix', avatar: '/Avatar.svg' },
+  { id: '2', name: 'Olivia Rhye', username: '@olivia', avatar: '/Avatar-1.svg' },
+  { id: '3', name: 'Lana Steiner', username: '@lana', avatar: '/Avatar-2.svg' },
+  { id: '4', name: 'Demi Wilkinson', username: '@demi', avatar: '/Avatar-3.svg' },
+  { id: '5', name: 'Candice Wu', username: '@candice', avatar: '/Avatar-4.svg' },
+  { id: '6', name: 'Natali Craig', username: '@natali', avatar: '/Avatar-5.svg' },
+  { id: '7', name: 'Drew Cano', username: '@drew', avatar: '/Avatar-6.svg' },
 ]
 
 export default function TagSearch() {
