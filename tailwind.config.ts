@@ -12,6 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily:{
+        sfpro: "var(--font-sfpro)",
+      },
+      boxShadow: {
+        'custom-inset': '0px 0px 6.2px 0px #FFFFFF3D inset', // Custom shadow
+      },
     },
   },
   plugins: [],

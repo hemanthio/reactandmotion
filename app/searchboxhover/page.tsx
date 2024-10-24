@@ -1,6 +1,5 @@
 
 
-
 'use client'
 
 import { useState, useRef, useEffect, KeyboardEvent } from 'react'
@@ -108,13 +107,13 @@ export default function TagSearch() {
   }, [])
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-start p-16 justify-center h-screen font-sfpro">
       <div 
         ref={containerRef} 
-        className="w-[500px] relative"
+        className="w-[690px] relative rounded-[15px]"
       >
         <div 
-          className="flex flex-wrap items-center gap-2 p-2 bg-white shadow-sm rounded-md cursor-text"
+          className="flex flex-wrap items-center gap-2 p-2 border-[1.86px] bg-white shadow-sm rounded-md cursor-text"
           onClick={() => {
             searchInputRef.current?.focus()
             setIsOpen(true)
@@ -125,18 +124,18 @@ export default function TagSearch() {
           {selectedUsers.map((user) => (
             <div
               key={user.id}
-              className="flex items-center space-x-1 bg-gray-100 rounded-full px-2 py-1 text-sm"
+              className="flex items-center gap-[5.5px] space-x-1 border-[1.8px] border-[#D0D5DD] rounded-[11.16px] px-2 py-1 text-[#344054] text-[17px]"
             >
-              <Image src={user.avatar} alt="" width={16} height={16} className="rounded-full" />
+              <Image src={user.avatar} alt="" width={29.76} height={29.76} className="rounded-full" />
               <span>{user.name.split(' ')[0]}</span>
               <button 
                 onClick={(e) => {
                   e.stopPropagation()
                   handleRemoveUser(user.id)
                 }}
-                className="ml-1 text-gray-500 hover:text-gray-700"
+                className="ml-1 text-gray-500  hover:text-gray-700"
               >
-                <X className="w-3 h-3" />
+                <X className="w-4 h-4" />
                 <span className="sr-only">Remove {user.name}</span>
               </button>
             </div>
@@ -148,7 +147,7 @@ export default function TagSearch() {
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setIsOpen(true)}
-            className="flex-1 outline-none"
+            className="flex-1 outline-none "
             placeholder="Search"
             aria-label="Search users"
           />
@@ -158,11 +157,35 @@ export default function TagSearch() {
         <div 
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className={`absolute w-full mt-1 bg-white rounded-md shadow-lg transform transition-all duration-200 ease-in-out z-10 ${
+          className={`absolute w-full mt-1 bg-white rounded-[28px] shadow-lg transform transition-all duration-200 ease-in-out z-10 ${
             isOpen ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-95 -translate-y-2 pointer-events-none'
           }`}
         >
-          <div className="max-h-[300px] overflow-y-auto">
+          <div className="max-h-[400px] overflow-y-auto custom-scrollbar">
+          <style jsx global>{`
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 14.88px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+    margin: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #E4E7EC;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #D0D5DD;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+`}</style>
             <ul ref={listRef} className="p-2 space-y-2">
               {filteredAndSortedUsers.map((user, index) => (
                 <li
@@ -177,10 +200,10 @@ export default function TagSearch() {
                   } hover:bg-gray-100`}
                 >
                   <div className="flex items-center space-x-3">
-                    <Image src={user.avatar} alt="" width={32} height={32} className="rounded-full" />
-                    <div>
-                      <div className="font-medium">{user.name}</div>
-                      <div className="text-sm text-gray-500">{user.username}</div>
+                    <Image src={user.avatar} alt="" width={44.64} height={44.64} className="rounded-full" />
+                    <div className='flex items-center gap-[10px]   justify-center'>
+                      <div className="font-[400] text-[#101828] text-[20px]">{user.name}</div>
+                      <div className="text-[20px] pt-[2px] text-gray-500">{user.username}</div>
                     </div>
                   </div>
                   {isSelected(user.id) && (
