@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from 'framer-motion';
 import Maskgroup from '../../public/task/Maskgroup.svg'
 import taskbrand from '../../public/task/taskbrand.svg'
-import dashboard from '../../public/task/dashboard.svg'
+import dashboard from '../../public/task/dashboard.png'
 import { ArrowRight } from 'lucide-react';
 
 const TaskLanding = () => {

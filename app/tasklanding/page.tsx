@@ -72,7 +72,7 @@ export default function TaskLanding() {
       </div>
 
       <div className='flex justify-end w-full'>
-        <main className="w-full py-16 flex flex-col lg:flex-row items-center justify-between relative z-10">
+        <main className="w-full py-16 flex flex-col lg:flex-row items-center justify-between  relative z-10">
           <motion.div 
             className="lg:w-1/2 mb-12 lg:mb-0 pl-12"
             initial="hidden"
