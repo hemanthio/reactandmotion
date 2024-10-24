@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import Maskgroup from '../../public/task/Maskgroup.svg'
+import Maskgroup from '../../public/task/Maskgroup.png'
 import taskbrand from '../../public/task/taskbrand.svg'
 import dashboard from '../../public/task/dashboard.png'
 import { ArrowRight } from 'lucide-react';
@@ -33,7 +33,7 @@ const TaskLanding = () => {
     <div className="min-h-screen bg-[#030818] relative">
       {/* Background Image */}
       <div className="absolute bg-[#030818] h-[116vh] inset-0 z-0">
-        <Image src={Maskgroup} alt="Background" layout="fill" objectFit="cover" className='p-4  rounded-[24px] opacity-90'/>
+        <Image src={Maskgroup} alt="Background" layout="fill" objectFit="cover" className='p-4  rounded-[24px] opacity-100'/>
       </div>
       
       {/* Content Wrapper */}
@@ -98,8 +98,8 @@ const TaskLanding = () => {
 
           {/* Project UI Preview */}
           <motion.div className="mt-14" variants={staggerVariants}>
-            <div className=" rounded-xl  max-w-5xl mx-auto">
-              <Image src={dashboard} alt='' className='w-full h-full '/>
+            <div className=" rounded-md  max-w-5xl mx-auto">
+              <Image src={dashboard} alt='' className='w-full h-full rounded-3xl '/>
             </div>
           </motion.div>
         </div>
