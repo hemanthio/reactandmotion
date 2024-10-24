@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import taskkwhite from '../../public/task/taskkwhite.svg'
 import taskdash from '../../public/task/taskdash.svg'
-import taskbg from '../../public/task/taskbg.svg'
+import taskbg from '../../public/task/taskbg.png'
 
 export default function TaskLanding() {
   const [email, setEmail] = useState('')
@@ -17,7 +17,7 @@ export default function TaskLanding() {
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 2,
+        duration: 1.5,
         ease: "easeInOut",
         staggerChildren: 0.3,
       }
@@ -78,7 +78,7 @@ export default function TaskLanding() {
             initial="hidden"
             animate="visible"
             variants={staggerVariants}
-            style={{ width: '500px', height: '400px', overflow: 'auto' }}
+            style={{ width: '500px', height: '450px', overflow: 'hidden' }}
           >
             <motion.div variants={itemVariants}>
               <button className="border-[1px] border-[#DFD7FF1A] text-white pl-2 pr-4  gap-2 py-2 rounded-full mb-4 flex items-center">
