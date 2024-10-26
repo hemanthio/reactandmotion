@@ -7,15 +7,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function GoldFilledStarButton() {
   const [count, setCount] = useState(68)
   const [isStarred, setIsStarred] = useState(false)
-  const [isGlowing, setIsGlowing] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   const handleStarClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsStarred(!isStarred)
     setCount(prevCount => isStarred ? prevCount - 1 : prevCount + 1)
-    setIsGlowing(true)
-    setTimeout(() => setIsGlowing(false), 1000) // Stop glowing after 1 second
   }
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -47,17 +44,6 @@ export default function GoldFilledStarButton() {
                 hover:text-yellow-400`}
               fill={isStarred ? 'currentColor' : 'none'}
             />
-            <AnimatePresence>
-              {isGlowing && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 0.4, scale: 1.6 }}
-                  exit={{ opacity: 0, scale: 1.5 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-yellow-400 rounded-full"
-                ></motion.div>
-              )}
-            </AnimatePresence>
           </div>
           <span className="text-white font-sfpro font-medium">Star</span>
         </div>

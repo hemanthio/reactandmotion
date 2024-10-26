@@ -46,6 +46,7 @@ export default function Component() {
                     animate={controls}
                   />
                 </div>
+            
               </div>
               <motion.div 
                 className="w-10 h-10 bg-[#E1FF02] rounded-full flex items-center justify-center z-10"

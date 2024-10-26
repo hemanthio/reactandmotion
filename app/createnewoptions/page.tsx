@@ -38,12 +38,7 @@ export default function CreateNewOptions() {
       width: '160px', 
       height: '48px', 
       opacity: 0.8,
-      // transition: { 
-      //   type: " fade-in ", 
-      //   stiffness: 200, 
-      //   damping: 40,
-      //   duration: 0.3
-      // }
+    
     }
   }
 
@@ -94,6 +89,7 @@ export default function CreateNewOptions() {
               <span className='text-sm'>Create New</span>
             </div>
           )}
+          
         </motion.div>
       </AnimatePresence>
     </div>

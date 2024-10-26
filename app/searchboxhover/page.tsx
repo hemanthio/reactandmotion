@@ -153,7 +153,7 @@ export default function TagSearch() {
           />
         </div>
 
-        {/* Dropdown list */}
+       
         <div 
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
