@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import taskkwhite from '../../public/task/taskkwhite.svg'
-import taskdash from '../../public/task/taskdash.png'
-import taskbg from '../../public/task/taskbg.png'
+import taskkdash from '../../public/task/taskkdash.png'
+import taskkbg from '../../public/task/taskkbg.png'
 
 export default function TaskLanding() {
   const [email, setEmail] = useState('')
@@ -39,7 +39,7 @@ export default function TaskLanding() {
   return (
     <div className="min-h-screen text-white font-sfpro relative">
       <Image 
-        src={taskbg} 
+        src={taskkbg} 
         alt="Background" 
         layout="fill" 
         objectFit="cover" 
@@ -124,7 +124,7 @@ export default function TaskLanding() {
             transition={{ delay: 1.6, duration: 1.2, ease: "easeOut" }}
           >
             <Image
-              src={taskdash}
+              src={taskkdash}
               alt="Taskk application interface"
               width={800}
               height={600}
