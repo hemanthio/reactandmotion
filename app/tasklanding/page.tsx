@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import taskkwhite from '../../public/task/taskkwhite.svg'
-import taskkdash from '../../public/task/taskkdash.png'
+import taskkdash from '../../public/task/taskkdash.svg'
 import taskkbg from '../../public/task/taskkbg.png'
 
 export default function TaskLanding() {
