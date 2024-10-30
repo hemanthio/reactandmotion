@@ -21,8 +21,6 @@ export default function CustomEarningsChart() {
     monthlyData.reduce((sum, data) => sum + data.earnings, 0)
   );
 
-  // const [value, cycleValue] = useCycle(values);
-  // useRootClick(cycleValue);
 
   const handleBarClick = (index: number) => {
     const clickedMonth = monthlyData[index].month;
