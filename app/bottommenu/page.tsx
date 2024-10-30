@@ -1,12 +1,12 @@
-'use client';
+
+'use client'
 
 import React, { useState, FC, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Link, Code, Laptop, FileText, Image, Clock, LucideIcon } from 'lucide-react';
-import { div } from 'framer-motion/client';
 
 interface MenuItemProps {
-  icon?: LucideIcon | (() => JSX.Element);
+  icon?: LucideIcon | React.ComponentType;
   text: string;
   subtext?: string;
   date?: string;
@@ -24,7 +24,7 @@ const MenuItem: FC<MenuItemProps> = ({ icon: Icon, text, subtext, date, type, on
     }}
   >
     <div className="flex items-center">
-      {Icon && (typeof Icon === 'function' ? <Icon /> : <Icon className="mr-2" size={18} />)}
+      {Icon && <Icon className="mr-2" size={18} />}
       <div>
         <div className="text-sm text-black">{text}</div>
         {subtext && <div className="text-sm opacity-90 font-medium text-[#634935]">{subtext}</div>}
