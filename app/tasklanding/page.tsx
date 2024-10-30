@@ -37,7 +37,7 @@ export default function TaskLanding() {
   };
 
   return (
-    <div className="min-h-screen text-white font-sfpro relative">
+    <div className="min-h-screen overflow-x-hidden text-white font-sfpro relative">
       <Image 
         src={taskkbg} 
         alt="Background" 
