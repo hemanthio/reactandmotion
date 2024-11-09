@@ -53,7 +53,7 @@ export default function Component() {
   useEffect(() => {
     const interval = setInterval(() => {
       setScore(prevScore => {
-        if (prevScore < 200) {
+        if (prevScore < 300) {
           setDirection(1)
           return prevScore + 1
         } else {
@@ -64,7 +64,7 @@ export default function Component() {
           //   spread: 100,
           //   origin: { y: 0 }
           // });
-          return 200
+          return 300
         }
       })
     }, 15) // Faster transition
