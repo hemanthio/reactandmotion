@@ -19,9 +19,9 @@ const loadComponent = async (name: string) => {
 
 const ComponentPage = async () => {
   const { componentName } = useParams();
-  
   // Load the component based on the parameter
-  const Component = await loadComponent(componentName);
+  const componentNameString = Array.isArray(componentName) ? componentName[0] : componentName;
+  const Component = await loadComponent(componentNameString);
 
   if (!Component) return notFound();
 
