@@ -9,8 +9,8 @@ const ScrambleButton = ({ text = "Browse components", className = "" }) => {
   const [iteration, setIteration] = useState(0);
   
   const letters = "abcdefghijklmnopqrstuvwxyz-.,+*!?@&%/=";
-  
-  const scrambleText = (iteration) => {
+
+  const scrambleText = (iteration: number) => {
     return text
       .split("")
       .map((letter, index) => {
@@ -23,16 +23,16 @@ const ScrambleButton = ({ text = "Browse components", className = "" }) => {
   };
   
   useEffect(() => {
-    let interval;
-    
+    let interval: NodeJS.Timeout | null = null; // Specify the type for interval
+
     if (isHovered) {
       interval = setInterval(() => {
         setIteration(prev => {
-          const newIteration = prev + 1;
+          const newIteration = Math.min(prev + 1, text.length); // Ensure newIteration does not exceed text length
           setDisplayText(scrambleText(newIteration));
           
           if (newIteration >= text.length) {
-            clearInterval(interval);
+            clearInterval(interval!); // Use non-null assertion since we check for null
           }
           
           return newIteration;
