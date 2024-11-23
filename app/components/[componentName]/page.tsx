@@ -5,6 +5,7 @@
 import { useParams, notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import Link from 'next/link'; // Import Link for navigation
 
 // Function to load the component dynamically
 const loadComponent = async (name: string) => {
@@ -26,10 +27,13 @@ const ComponentPage = async () => {
   if (!Component) return notFound();
 
   return (
-    <div >
-     
+    <div className="relative font-sfpro"> {/* Added relative positioning to the parent div */}
       <Component />
-      
+      <Link href="/components" passHref>
+        <button className="absolute bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full z-10">
+          Go to Components
+        </button>
+      </Link>
     </div>
   );
 };

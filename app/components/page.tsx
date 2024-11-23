@@ -7,41 +7,108 @@ import { GeistSans } from 'geist/font/sans';
 
 const Layout = () => {
   const componentsList = [
-    { name: "Button", url: "/components/button" },
-    { name: "Card", url: "/components/card" },
-    { name: "Modal", url: "/components/modal" },
-    { name: "Dropdown", url: "/components/dropdown" },
-    { name: "Table", url: "/components/table" },
-    { name: "Accordion", url: "/components/accordion" },
-    { name: "Tabs", url: "/components/tabs" },
-    { name: "Avatar", url: "/components/avatar" },
+    { name: "Herosection", url: "/components/herosection" },
+    { name: "FeatureTabs", url: "/components/FeatureTabs" },
+    { name: "pausecard", url: "/components/pausecard" },
+    { name: "Createnewoptions", url: "/components/Createnewoptions" },
+    { name: "task herosection", url: "/components/tasklanding" },
+    { name: "glassy sign up", url: "/components/glassysignup" },
+    { name: "Theme toggle", url: "/components/Themetoggle" },
+    { name: "task herosection", url: "/components/taskherosection" },
+    { name: "Interactive icon bar", url: "/components/interactiveiconbar" },
+    { name: "Number motion", url: "/components/numbermotion" },
+    { name: "Searchbox hover", url: "/components/searchboxhover" },
+    { name: "Pricing card", url: "https://symphonious-cranachan-6d7191.netlify.app/" },
+    { name: "metricdashboard", url: "/components/metricdashboard" },
   ];
+  
 
   const components = [
     {
       heading: "Herosection",
-      subheading: "Interactive button component with various styles and states. Highly customizable and accessible.",
+      subheading: "An interactive hero section component designed to capture user attention.",
       url: "/components/herosection",
       image: "/thumbnails/herosection.png" // Assuming the image file name
     },
     {
       heading: "FeatureTabs",
-      subheading: "Versatile card component for content display with flexible layout options",
+      subheading: "A component that allows users to switch between different features seamlessly.",
       url: "/components/FeatureTabs",
       image: "/thumbnails/featuretabs.png" // Assuming the image file name
     },
     {
-      heading: "pauscard",
-      subheading: "Customizable modal dialog component with backdrop and animations",
+      heading: "pausecard",
+      subheading: "A customizable modal dialog component for user interactions.",
       url: "/components/pausecard",
       image: "/thumbnails/pausecard.png" // Assuming the image file name
     },
     {
-      heading: "Steps",
-      subheading: "Flexible dropdown menu with custom triggers and positioning",
-      url: "/components/Steps",
-      image: "/thumbnails/steps.png" // Assuming the image file name
-    }
+      heading: "Createnewoptions",
+      subheading: "A flexible dropdown menu component for creating new options.",
+      url: "/components/Createnewoptions",
+      image: "/thumbnails/Createnewoptions.png" // Assuming the image file name
+    },
+    {
+      heading: "task herosection",
+      subheading: "A hero section tailored for task-oriented applications.",
+      url: "/components/tasklanding",
+      image: "/thumbnails/tasklanding.png" // Assuming the image file name
+    },
+    {
+      heading: "glassy sign up",
+      subheading: "A visually appealing sign-up component with a glassy effect.",
+      url: "/components/glassysignup",
+      image: "/thumbnails/glassysignup.png" // Assuming the image file name
+    },
+    {
+      heading: "Theme toggle",
+      subheading: "A component that allows users to switch between light and dark themes.",
+      url: "/components/Themetoggle",
+      image: "/thumbnails/themetoggle.png" // Assuming the image file name
+    },
+    {
+      heading: "task herosection",
+      subheading: "Another hero section designed specifically for task management.",
+      url: "/components/taskherosection",
+      image: "/thumbnails/taskherosection.png" // Assuming the image file name
+    },
+    {
+      heading: "Interactive icon bar",
+      subheading: "An icon bar that provides interactive features for users.",
+      url: "/components/interactiveiconbar",
+      image: "/thumbnails/interactiveiconbar.png" // Assuming the image file name
+    },
+    {
+      heading: "Number motion",
+      subheading: "A component that animates numbers for dynamic presentations.",
+      url: "/components/numbermotion",
+      image: "/thumbnails/numbermotion.png" // Assuming the image file name
+    },
+    {
+      heading: "Searchbox hover",
+      subheading: "A search box component that enhances user experience with hover effects.",
+      url: "/components/searchboxhover",
+      image: "/thumbnails/searchboxhover.png" // Assuming the image file name
+    },
+    {
+      heading: "Pricing card",
+      subheading: "A card component that displays pricing options attractively.",
+      url: "https://symphonious-cranachan-6d7191.netlify.app/",
+      image: "/thumbnails/pricecard.png" 
+    },
+    {
+      heading: "metricdashboard",
+      subheading: "A dashboard component for displaying metrics and analytics.",
+      url: "/components/metricdashboard",
+      image: "/thumbnails/metricdashboard.png" 
+    },
+    {
+      heading: "carosualstripe",
+      subheading: "A carousel component that showcases items in a stripe format.",
+      url: "/components/carosualstripe",
+      image: "/thumbnails/carosualstripe.png" 
+    },
+
   ];
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -77,16 +144,21 @@ const Layout = () => {
             </a>
           </div>
 
-          {/* Right: Search */}
-          <div className="relative w-64">
-            <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search components..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-8 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+          {/* Left: Request Button and Search Bar */}
+          <div className="flex items-center space-x-2">
+            <a href="/components/request" className="text-white rounded  text-sm font-sfpro bg-black p-[7px]">
+              Request
+            </a>
+            <div className="relative w-64">
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search components..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-8 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
           </div>
         </div>
       </nav>
@@ -96,7 +168,7 @@ const Layout = () => {
         {/* Sidebar */}
         <aside className="w-64 fixed h-[calc(100vh-4rem)] border-r border-gray-200 p-4 bg-white">
           <div className="h-full overflow-auto">
-            <div className="px-4 py-2 text-gray-600 font-medium">
+            <div className="px-4 py-2 text-black text-xl font-sfpro">
               All Components
             </div>
             <div className="space-y-1 mt-2">
@@ -104,7 +176,7 @@ const Layout = () => {
                 <a
                   key={index}
                   href={item.url}
-                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg"
+                  className="block px-4 py-2 text-lg font-sfpro text-gray-600 hover:bg-gray-100 rounded-lg"
                 >
                   {item.name}
                 </a>
@@ -133,10 +205,10 @@ const Layout = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600">
+                    <h3 className="text-xl  font-sfpro font-bold text-gray-900 group-hover:text-blue-600">
                       {component.heading}
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-lg font-sfpro text-gray-500">
                       {component.subheading}
                     </p>
                   </div>

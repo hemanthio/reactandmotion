@@ -4,9 +4,9 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
-import taskkwhite from '../../public/task/taskkwhite.svg'
-import taskkdash from '../../public/task/taskkdash.svg'
-import taskkbg from '../../public/task/taskkbg.png'
+import taskkwhite from '../public/task/taskkwhite.svg'
+import taskkdash from '../public/task/taskkdash.svg'
+import taskkbg from '../public/task/taskkbg.png'
 
 export default function TaskLanding() {
   const [email, setEmail] = useState('')

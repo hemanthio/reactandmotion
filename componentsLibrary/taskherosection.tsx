@@ -3,9 +3,9 @@
 import React from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import background from '../../public/task/background.png'
-import taskbrand from '../../public/task/taskbrand.svg'
-import dashboard2 from '../../public/task/dashboard2.png'
+import background from '../public/task/background.png'
+import taskbrand from '../public/task/taskbrand.svg'
+import dashboard2 from '../public/task/dashboard2.png'
 import { ArrowRight } from 'lucide-react';
 
 const TaskLanding = () => {
