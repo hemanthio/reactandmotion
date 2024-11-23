@@ -16,6 +16,14 @@ export async function POST(request: Request) {
       );
     }
 
+    // Check if supabaseUrl is defined
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      return NextResponse.json(
+        { error: 'Supabase URL is required' },
+        { status: 500 }
+      );
+    }
+
     // Prepare file for upload
     const arrayBuffer = await image.arrayBuffer();
     const blob = new Blob([arrayBuffer], { type: image.type });
