@@ -40,7 +40,7 @@ export default function ImageGallery() {
               className={`object-cover h-full w-full transition-all duration-300 ${
                 expandedIndex === index ? "" : "grayscale"
               }`}
-              priority={index === 4}
+              loading={index === 4 ? "eager" : "lazy"}
             />
           </motion.div>
         ))}

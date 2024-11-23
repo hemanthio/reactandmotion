@@ -20,6 +20,7 @@ const Layout = () => {
     { name: "Searchbox hover", url: "/components/searchboxhover" },
     { name: "Pricing card", url: "https://symphonious-cranachan-6d7191.netlify.app/" },
     { name: "metricdashboard", url: "/components/metricdashboard" },
+    { name: "carosualstripe", url: "/components/carosualstripe" },
   ];
   
 
